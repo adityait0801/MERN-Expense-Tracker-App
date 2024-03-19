@@ -5,6 +5,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Body from './components/Body';
 import SignUp from './components/SignUp';
 import Header from './components/Header';
+import Login from './components/Login';
 
 const AppLayout = () => {
   return (
@@ -25,8 +26,12 @@ const appRouter = createBrowserRouter ([
         element : <Body/>
       },
       {
-        path : '/signup', 
+        path : '/user/signup', 
         element : <SignUp/>
+      },
+      {
+        path : '/user/login', 
+        element : <Login/>
       }
     ]
   }
